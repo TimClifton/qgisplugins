@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<plugins>
+
+    <pyqgis_plugin name="AAAAAA" version="0.1.0">
+        <description>Layer importer for Tim</description>
+        <homepage>www.google.com</homepage>
+        <qgis_minimum_version>3.4</qgis_minimum_version>
+        <file_name>layerimporter.zip</file_name>
+        <author_name>Tim Clifton -test</author_name>
+        <download_url>http://localhost/layerimporter.zip</download_url>
+    </pyqgis_plugin>
+	   <pyqgis_plugin name="BBBBB" version="0.1.0">
+        <description>Layer importer for Tim</description>
+        <homepage>www.google.com</homepage>
+        <qgis_minimum_version>3.4</qgis_minimum_version>
+        <file_name>BBBBB.zip</file_name>
+        <author_name>Tim Clifton -test</author_name>
+        <download_url>http://localhost/BBBBB.zip</download_url>
+    </pyqgis_plugin>
+
+</plugins>
