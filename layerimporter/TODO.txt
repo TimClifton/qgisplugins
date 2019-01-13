@@ -1,3 +1,0 @@
-7/01/2019
-
-Add check to stop movement of layers that are not a part of the naming convention - High Priority

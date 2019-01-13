@@ -1,5 +1,0 @@
-<RCC>
-    <qresource prefix="/plugins/layer_importer" >
-        <file>icon.png</file>
-    </qresource>
-</RCC>
