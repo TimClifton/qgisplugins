@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <plugins>
-	    <pyqgis_plugin name="Layer Importer" version="0.1.3">
+	<pyqgis_plugin name="Layer Importer" version="0.1.3">
         <description>Layer importer for WWE Test</description>
         <homepage>www.google.com</homepage>
         <qgis_minimum_version>3.0</qgis_minimum_version>
