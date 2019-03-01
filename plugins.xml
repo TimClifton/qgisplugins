@@ -1,8 +1,16 @@
 <?xml version="1.0"?>
 <plugins>
+	    <pyqgis_plugin name="Layer Importer" version="0.1.4">
+        <description>Layer importer for WestWind Energy</description>
+        <homepage>https://github.com/TimClifton/qgisplugins</homepage>
+        <qgis_minimum_version>3.0</qgis_minimum_version>
+        <file_name>layerimporter.0.1.4.zip</file_name>
+        <author_name>Tim Clifton</author_name>
+        <download_url>https://timclifton.github.io/qgisplugins/layerimporter.0.1.4.zip</download_url>
+    </pyqgis_plugin>
 	    <pyqgis_plugin name="Layer Importer" version="0.1.3">
         <description>Layer importer for WestWind Energy</description>
-        <homepage>www.google.com</homepage>
+        <homepage>https://github.com/TimClifton/qgisplugins</homepage>
         <qgis_minimum_version>3.0</qgis_minimum_version>
         <file_name>layerimporter.0.1.3.zip</file_name>
         <author_name>Tim Clifton</author_name>
@@ -10,7 +18,7 @@
     </pyqgis_plugin>
 	    <pyqgis_plugin name="Layer Importer" version="0.1.2">
         <description>Layer importer for WestWind Energy</description>
-        <homepage>www.google.com</homepage>
+        <homepage>https://github.com/TimClifton/qgisplugins</homepage>
         <qgis_minimum_version>3.0</qgis_minimum_version>
         <file_name>layerimporter.0.1.2.zip</file_name>
         <author_name>Tim Clifton</author_name>
@@ -18,7 +26,7 @@
     </pyqgis_plugin>
     <pyqgis_plugin name="Layer Importer" version="0.1.1">
         <description>Layer importer for WestWind Energy</description>
-        <homepage>www.google.com</homepage>
+        <homepage>https://github.com/TimClifton/qgisplugins</homepage>
         <qgis_minimum_version>3.0</qgis_minimum_version>
         <file_name>layerimporter.0.1.1.zip</file_name>
         <author_name>Tim Clifton</author_name>
@@ -26,7 +34,7 @@
     </pyqgis_plugin>
 	<pyqgis_plugin name="Layer Importer" version="0.1.0">
         <description>Layer importer for WestWind Energy/description>
-        <homepage>www.google.com</homepage>
+        <homepage>https://github.com/TimClifton/qgisplugins</homepage>
         <qgis_minimum_version>3.0</qgis_minimum_version>
         <file_name>layerimporter.0.1.0.zip</file_name>
         <author_name>Tim Clifton</author_name>
