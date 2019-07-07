@@ -41,12 +41,19 @@
         <download_url>https://timclifton.github.io/qgisplugins/layerimporter.0.1.1.zip</download_url>
     </pyqgis_plugin>
 	<pyqgis_plugin name="Layer Importer" version="0.1.0">
-        <description>Layer importer for WestWind Energy/description>
+        <description>Layer importer for WestWind Energy</description>
         <homepage>https://github.com/TimClifton/qgisplugins</homepage>
         <qgis_minimum_version>3.0</qgis_minimum_version>
         <file_name>layerimporter.0.1.0.zip</file_name>
         <author_name>Tim Clifton</author_name>
         <download_url>https://timclifton.github.io/qgisplugins/layerimporter.0.1.0.zip</download_url>
     </pyqgis_plugin>
-
+	<pyqgis_plugin name="Layer Source Changer" version="0.1.0">
+        <description>Changes the source of each layer item with the same source</description>
+        <homepage>https://github.com/TimClifton/qgisplugins</homepage>
+        <qgis_minimum_version>3.0</qgis_minimum_version>
+        <file_name>layersourcechanger.0.1.0.zip</file_name>
+        <author_name>Tim Clifton</author_name>
+        <download_url>https://timclifton.github.io/qgisplugins/layerimporter.0.1.0.zip</download_url>
+    </pyqgis_plugin>
 </plugins>
