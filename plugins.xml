@@ -6,7 +6,7 @@
         <qgis_minimum_version>3.0</qgis_minimum_version>
         <file_name>WestWind_Utility.0.1.0.zip</file_name>
         <author_name>Tim Clifton</author_name>
-        <download_url>https://timclifton.github.io/qgisplugins/WestWind_Utility0.1.0.zip</download_url>
+        <download_url>https://timclifton.github.io/qgisplugins/WestWind_Utility.0.1.0.zip</download_url>
     </pyqgis_plugin>
 		<pyqgis_plugin name="Layer Importer" version="0.1.5">
         <description>Layer importer for WestWind Energy</description>
