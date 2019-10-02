@@ -1,15 +1,15 @@
 <?xml version="1.0"?>
 <plugins>
 	<pyqgis_plugin name="Westwind Energy Utility" version="0.2.1">
-        <description>Changes the source of each layer item with the same source</description>
+        <description>Plugin to simply several everyday tasks at Westwind including: - Importing new layers - Updating layer source files - Renaming map themes - Upreving infrastructure layers</description>
         <homepage>https://github.com/TimClifton/qgisplugins</homepage>
         <qgis_minimum_version>3.0</qgis_minimum_version>
         <file_name>westwind_utility.0.2.1.zip</file_name>
         <author_name>Tim Clifton</author_name>
         <download_url>https://timclifton.github.io/qgisplugins/westwind_utility.0.2.1.zip</download_url>
-    </pyqgis_plugin>
+	</pyqgis_plugin>
 	<pyqgis_plugin name="Westwind Energy Utility" version="0.2.0">
-        <description>Changes the source of each layer item with the same source</description>
+        <description>Plugin to simply several everyday tasks at Westwind including: - Importing new layers - Updating layer source files - Renaming map themes - Upreving infrastructure layers</description>
         <homepage>https://github.com/TimClifton/qgisplugins</homepage>
         <qgis_minimum_version>3.0</qgis_minimum_version>
         <file_name>westwind_utility.0.2.0.zip</file_name>
@@ -17,7 +17,7 @@
         <download_url>https://timclifton.github.io/qgisplugins/westwind_utility.0.2.0.zip</download_url>
     </pyqgis_plugin>
 	<pyqgis_plugin name="Westwind Energy Utility" version="0.1.1">
-        <description>Changes the source of each layer item with the same source</description>
+        <description>Plugin to simply several everyday tasks at Westwind including: - Importing new layers - Updating layer source files - Renaming map themes - Upreving infrastructure layers</description>
         <homepage>https://github.com/TimClifton/qgisplugins</homepage>
         <qgis_minimum_version>3.0</qgis_minimum_version>
         <file_name>westwind_utility.0.1.1.zip</file_name>
@@ -25,15 +25,15 @@
         <download_url>https://timclifton.github.io/qgisplugins/westwind_utility.0.1.1.zip</download_url>
     </pyqgis_plugin>
 	<pyqgis_plugin name="Westwind Energy Utility" version="0.1.0">
-        <description>Changes the source of each layer item with the same source</description>
+        <description>Plugin to simply several everyday tasks at Westwind including: - Importing new layers - Updating layer source files - Renaming map themes - Upreving infrastructure layers</description>
         <homepage>https://github.com/TimClifton/qgisplugins</homepage>
         <qgis_minimum_version>3.0</qgis_minimum_version>
         <file_name>westwind_utility.0.1.0.zip</file_name>
         <author_name>Tim Clifton</author_name>
         <download_url>https://timclifton.github.io/qgisplugins/westwind_utility.0.1.0.zip</download_url>
-    </pyqgis_plugin>
+    	</pyqgis_plugin>
 	<pyqgis_plugin name="Layer Importer" version="0.1.5">
-        <description>Layer importer for WestWind Energy</description>
+        <description>Plugin to simply several everyday tasks at Westwind including: - Importing new layers - Updating layer source files - Renaming map themes - Upreving infrastructure layers</description>
         <homepage>https://github.com/TimClifton/qgisplugins</homepage>
         <qgis_minimum_version>3.0</qgis_minimum_version>
         <file_name>layerimporter.0.1.5.zip</file_name>
