@@ -33,7 +33,7 @@
         <download_url>https://timclifton.github.io/qgisplugins/westwind_utility.0.1.0.zip</download_url>
     	</pyqgis_plugin>
 	<pyqgis_plugin name="Layer Importer" version="0.1.5">
-        <description>Plugin to simplify several everyday tasks at Westwind</description>
+        <description>Layer importer for WestWind Energy</description>
         <homepage>https://github.com/TimClifton/qgisplugins</homepage>
         <qgis_minimum_version>3.0</qgis_minimum_version>
         <file_name>layerimporter.0.1.5.zip</file_name>
