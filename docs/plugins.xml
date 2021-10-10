@@ -1,12 +1,20 @@
 <?xml version="1.0"?>
 <plugins>
+	<pyqgis_plugin name="Westwind Energy Utility" version="0.3.2">
+        <description>Plugin to simplify several everyday tasks at Westwind</description>
+        <homepage>https://github.com/TimClifton/qgisplugins</homepage>
+        <qgis_minimum_version>3.0</qgis_minimum_version>
+        <file_name>westwind_utility.0.3.2.zip</file_name>
+        <author_name>Tim Clifton</author_name>
+        <download_url>https://timclifton.github.io/qgisplugins/westwind_utility.0.3.2.zip</download_url>
+	</pyqgis_plugin>
 	<pyqgis_plugin name="Westwind Energy Utility" version="0.3.1">
         <description>Plugin to simplify several everyday tasks at Westwind</description>
         <homepage>https://github.com/TimClifton/qgisplugins</homepage>
         <qgis_minimum_version>3.0</qgis_minimum_version>
         <file_name>westwind_utility.0.3.1.zip</file_name>
         <author_name>Tim Clifton</author_name>
-        <download_url>https://timclifton.github.io/qgisplugins/westwind_utility.0.3.0.zip</download_url>
+        <download_url>https://timclifton.github.io/qgisplugins/westwind_utility.0.3.1.zip</download_url>
 	</pyqgis_plugin>
 	<pyqgis_plugin name="Westwind Energy Utility" version="0.3.0">
         <description>Plugin to simplify several everyday tasks at Westwind</description>

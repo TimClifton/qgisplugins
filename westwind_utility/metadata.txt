@@ -23,7 +23,7 @@ hasProcessingProvider=no
 # Uncomment the following line and add your changelog:
 changelog=
 	0.3.2
-	- Final version before rewrite
+	- Removed threading from importer. Added in filter for working layers
 	0.3.1:
 	- Fixed the fuzzy matching. Fixed the file search progress updating when the treeview ordering is changed. Added in project creator
 	0.3.0:
