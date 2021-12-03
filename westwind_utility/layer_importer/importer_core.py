@@ -12,7 +12,6 @@ import time
 from qgis.PyQt.QtWidgets import QApplication, QMessageBox
 
 
-
 class ImporterCore:
 
     def __init__(self, dockWidget, _vectorPath):
@@ -109,9 +108,6 @@ class ImporterCore:
         sortedList = sorted(layerList,key=lambda x: x.versionNum, reverse=False)
         return sortedList
 
-    # def isSorted(self,key = lambda x: x.versionNum): 
-    #     return all([key(x[i]) <= key(x[i + 1]) for i in range(len(x) - 1)])
-
     def setLoadPath (self):
         project = QgsProject.instance()
         if QgsExpressionContextUtils.projectScope(project).variable('project_importpath') == None:
@@ -123,7 +119,6 @@ class ImporterCore:
         self.vectorPath = self.dockWidget.lineEdit.text()
 
         return self.vectorPath
-
 
     def runMain(self):
         root = QgsProject.instance().layerTreeRoot()
@@ -299,7 +294,7 @@ class ImporterCore:
             layer.layerObject.parent().removeChildNode(layer.layerObject)
             logText.append('')
 
-    def getImportExistingLayersList(self,_ignoreFolders):
+    def getImportExistingLayersList(self,_ignoreFolders,limitVersion=False):
         self.dockWidget.label_2.setText('Getting layer list to import')
 
         self.dockWidget.progressBar.reset()
@@ -316,7 +311,11 @@ class ImporterCore:
                 newLayerObject = layerInfo(layer, layer.name())
                 existingLayerList.append(newLayerObject)
 
-        existingLayers = root.findLayers()
+        
+
+
+        #existingLayers = root.findLayers()
+        latestVersionDic = {}
 
         for roots, dirs, files in walkData:
 
@@ -336,7 +335,7 @@ class ImporterCore:
 
 
                 if reg.match(file):
-                    print(file)
+                    #print(file)
                     TLayerFileInfo = layerFileInfo(roots+"\\"+file, file)
                     exactLayerExists = False
                     partNameFound = False
@@ -355,13 +354,52 @@ class ImporterCore:
                                 layerGroup = layerGroup.parent()
 
                     if exactLayerExists == False and partNameFound == True:
-                        print("exactLayerExists is %s and partNameFound is %s" %(exactLayerExists, partNameFound))
-                        print(TLayerFileInfo.path)
+                        #print("exactLayerExists is %s and partNameFound is %s" %(exactLayerExists, partNameFound))
+                        #print(TLayerFileInfo.path)
                         #copy the style of the previous latest layer
                         self.copyLatestLayerStyle(existingLayerList, TLayerFileInfo)
                         TLayerFileInfo.setlayerGroup(layerGroup)
+
+                        if limitVersion:
+                            print(f'Dictionary is {latestVersionDic}')
+                            if TLayerFileInfo.disciplineName not in latestVersionDic:
+
+                                print(f'Creating new dictionary item {TLayerFileInfo.disciplineName}. The current keys name is {TLayerFileInfo.disciplineName}')
+
+                                latestVersionDic= {TLayerFileInfo.disciplineName:[TLayerFileInfo]}
+                                print(f'The dictionary is now {latestVersionDic}')
+
+                            else:
+                                existingList = latestVersionDic[TLayerFileInfo.disciplineName]
+                                print(f'Existing list is {existingList}')
+
+                                print(f'The file infor is {TLayerFileInfo}')
+
+                                appendedList = existingList + [TLayerFileInfo]
+
+                                print(f'The appended list is now {appendedList}')
+
+                                latestVersionDic[TLayerFileInfo.disciplineName]=appendedList
+
+                                print(f'The diction was added to and is now {latestVersionDic}')
+
+
                         importLayerList.append(TLayerFileInfo)
 
+        if limitVersion:
+
+            importLayerList_=[]
+
+            for key in latestVersionDic:
+                layers = latestVersionDic[key]
+
+                layers.sort(key=lambda x: x.versionNum)
+
+                importLayerList_.append(layers[:3])
+
+            importLayerList=importLayerList_
+
+        
         self.dockWidget.label_2.setText('Layer list retrieved!')
 
         return importLayerList
@@ -411,7 +449,7 @@ class ImporterCore:
         matchedLayers=[]
         latestVersion =0
         latestVersionLayer = None
-        print('Here50')
+        #print('Here50')
         for layer in existingLayers:
 
             if layer.disciplineName == newLayer.disciplineName and layer.additionalInfo == newLayer.additionalInfo:
@@ -424,11 +462,11 @@ class ImporterCore:
         newLayerStyle = QgsMapLayerStyle()
 
         #print(latestVersionLayer.layerObject)
-        print('checking lastest version layer style')
+        #print('checking lastest version layer style')
         if latestVersionLayer !=None:
-            print('Testing')
-            print(latestVersionLayer)
+            #print('Testing')
+            #print(latestVersionLayer)
             newLayerStyle.readFromLayer(latestVersionLayer.layerObject.layer())
         if newLayerStyle.isValid():
-            print('Style is valid and good to go')
+            #print('Style is valid and good to go')
             newLayer.setLayerStyle(newLayerStyle)

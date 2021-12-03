@@ -78,13 +78,13 @@ class ImporterGui:
 
         if self.dockWidget.LI_existingLayersRadioButton.isChecked():
             ignoreFolders=self.dockWidget.ignoreFoldersTextEdit.toPlainText().split("\n")
-            importList = self.core.getImportExistingLayersList(ignoreFolders)
+            importList = self.core.getImportExistingLayersList(ignoreFolders,self.dockWidget.LI_LimitVersionsCheckBox.isChecked())
 
             self.core.importExistingLayersList(importList)
             #self.core.runMain()
-            if self.dockWidget.LI_LimitVersionsCheckBox.isChecked():
+            #if self.dockWidget.LI_LimitVersionsCheckBox.isChecked():
                 #print('hrete')
-                self.core.limitVersions()
+               # self.core.limitVersions()
 
             if self.dockWidget.LI_SortLayerCheckbox.isChecked()  and not self.dockWidget.LI_AddSSGroupCheckbox.isChecked() :
                 print('Preparing to sort')
