@@ -1,0 +1,17 @@
+
+Name: 'Dynamically Display Only One Feature For Collected Symbology' 
+Expression: '$id=array_first( array_agg( expression:=$id,filter:= intersects( $geometry, @map_extent)))'
+
+
+Name: Turbine Count by PropByFam and Useable area
+Desc: Counts the number of turbines by property by fam and calculates the ratio of turbines to available area
+Expression: 'PropByFam || ' \n '  || 
+
+'Count: '|| sum(aggregate('WAEP_WTGLayout_V03_01_c1e2f1fd_b3e1_4c56_a67a_b64a08453ac1',aggregate:='count',expression:=WWE_ID,filter:=intersects($geometry,geometry(@parent))),group_by:="PropByFam") || '\n'  ||
+
+
+
+'Area: ' || round(sum(area(intersection($geometry,aggregate('WAEP_WTGUnconstrainedArea_v04_01_45ce0f2e_045a_44d9_b9ad_5f953e96d5c9',aggregate:='collect', expression:=$geometry)))/10000,group_by:="PropByFam"),2) ||' Ha' || '\n' ||
+
+
+ 'Ratio: ' || to_string(round(sum(area(intersection($geometry,aggregate('WAEP_WTGUnconstrainedArea_v04_01_45ce0f2e_045a_44d9_b9ad_5f953e96d5c9',aggregate:='collect', expression:=$geometry)))/10000,group_by:="PropByFam")/sum(aggregate('WAEP_WTGLayout_V03_01_c1e2f1fd_b3e1_4c56_a67a_b64a08453ac1',aggregate:='count',expression:=WWE_ID,filter:=intersects($geometry,geometry(@parent))),group_by:="PropByFam"),2))'
