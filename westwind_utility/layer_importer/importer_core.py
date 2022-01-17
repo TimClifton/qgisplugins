@@ -393,13 +393,13 @@ class ImporterCore:
             for key in latestVersionDic:
                 layers = latestVersionDic[key]
 
-                layers.sort(key=lambda x: x.versionNum)
+                layers.sort(key=lambda x: x.versionNum,reverse=True)
 
-                importLayerList_.append(layers[:3])
+                importLayerList_=importLayerList_+layers[:3]
 
             importLayerList=importLayerList_
 
-        
+        print(f'Import layer List is {importLayerList}')
         self.dockWidget.label_2.setText('Layer list retrieved!')
 
         return importLayerList
