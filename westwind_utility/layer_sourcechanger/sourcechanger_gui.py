@@ -233,10 +233,17 @@ class SourceChangerGui:
         layerSources=[]
         treeLayers = self.project.layerTreeRoot().findLayers()
 
-        # for t in treeLayers:
-        #     print(t.layer())
+        for t in treeLayers:
+            print(t.layer())
+            if t.layer() == None:
+                print(f'This one is NONE SFDDFDFSDFSDF {t}')
 
-        #treeLayers = next(tlayer in tLayers if tlayer.layer().source() == None)
+        tree_empty_all = list(t for t in treeLayers if t.layer() == None)
+
+        # print(tree_empty_all)
+        # tree_empty=tree_empty_all[0]
+
+        # print(f'the empty layer is {tree_empty}. {tree_empty.layerId()} Name {tree_empty.name()}')
 
         treeLayers.sort(key=lambda x: ntpath.basename(x.layer().source()))
         print('Layer Count %d' %(len(treeLayers)))

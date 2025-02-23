@@ -42,7 +42,7 @@
        <enum>QTabWidget::Triangular</enum>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="LI_tab">
        <attribute name="title">
@@ -106,7 +106,7 @@
               <property name="orientation">
                <enum>Qt::Vertical</enum>
               </property>
-              <widget class="QWidget" name="">
+              <widget class="QWidget" name="layoutWidget">
                <layout class="QVBoxLayout" name="verticalLayout_26">
                 <item>
                  <layout class="QVBoxLayout" name="verticalLayout_25">
@@ -371,7 +371,7 @@
                 </item>
                </layout>
               </widget>
-              <widget class="QWidget" name="">
+              <widget class="QWidget" name="layoutWidget">
                <layout class="QVBoxLayout" name="verticalLayout_23">
                 <item>
                  <widget class="QProgressBar" name="progressBar">
@@ -661,7 +661,7 @@ p, li { white-space: pre-wrap; }
            <enum>QTabWidget::North</enum>
           </property>
           <property name="currentIndex">
-           <number>1</number>
+           <number>0</number>
           </property>
           <widget class="QWidget" name="tab_7">
            <attribute name="title">
